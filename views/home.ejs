@@ -9,29 +9,48 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 
-
-<%- include partials/navbar.ejs %>
-
-<!-- ! Determine the body -->
-<section>
-    <main>
-        <div class="date">
-            <p>26 July</p>
+<body>
+    <!-- ! Determine the Navigation Pannel -->
+    <nav>
+        <div id="iconText">
+            <p>Web Chatting App</p>
         </div>
-        <div class="message ">
-            <div class="titleName ">sharad maliwal <small>2:30pm</small> </div>
-            <p class="titleContent">Hello how are you</p>
+        <div id="navElements">
+            <ul>
+                <li><a href="./home" style="color: white; text-decoration: none">Home</a></li>
+                <li>Contact Developer</li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">About Application</button>
+                        <div class="dropdown-content">
+                            <a href="./aboutApplication" target="_blank">How Application works??</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="message ">
-            <div class="titleName ">divyansh yadav <small>2:35pm</small> </div>
-            <p class="titleContent">why do you care !!</p>
-        </div>
-        <div class="date">
-            <p>26 July</p>
-        </div>
-        <button>Send msg</button>
-    </main>
-</section>
+    </nav>
+
+    <!-- ! Determine the body -->
+    <section>
+        <main>
+            <div class="date">
+                <p>26 July</p>
+            </div>
+            <div class="message ">
+                <div class="titleName ">sharad maliwal <small>2:30pm</small> </div>
+                <p class="titleContent">Hello how are you</p>
+            </div>
+            <div class="message ">
+                <div class="titleName ">divyansh yadav <small>2:35pm</small> </div>
+                <p class="titleContent">why do you care !!</p>
+            </div>
+            <div class="date">
+                <p>26 July</p>
+            </div>
+            <a href="./replyMsg"><button>Reply</button></a>
+        </main>
+    </section>
 
 
-<%- include partials/footer.ejs %>
+<%- include ('partials/footer.ejs') %>

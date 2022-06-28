@@ -47,6 +47,10 @@ form {
     flex-direction: column;
 }
 
+a:visited{
+    color: blue;
+}
+
 input,
 button,
 span {

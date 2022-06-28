@@ -13,7 +13,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<%- include partials/navbar.ejs %>
+<body>
+    <!-- ! Determine the Navigation Pannel -->
+    <nav>
+        <div id="iconText">
+            <p>Web Chatting App</p>
+        </div>
+        <div id="navElements">
+            <ul>
+                <li><a href="./home" style="color: white; text-decoration: none">Home</a></li>
+                <li>Contact Developer</li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">About Application</button>
+                        <div class="dropdown-content">
+                            <a href="./aboutApplication" target="_blank">How Application works??</a>
+                            <!-- <a href="#">How Application maded??</a> -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
 <section>
@@ -22,7 +43,7 @@
             <div class="messageHeader">
                 <p>New Message</p>
             </div>
-            <form action="/index.html" method="get">
+            <form action="/replyMsg" method="post">
                 <span class="userNameArea">
                     <label for="userName">From: </label>
                     <div><button id="inputName" aria-placeholder="">User Name Here</button></div>

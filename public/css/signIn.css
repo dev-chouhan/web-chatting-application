@@ -84,6 +84,7 @@ section #backToReg{
 }
 
 section button{
+    width: 88%;
     margin-top: 6vh;
     padding: 10px;
     background-color: #b0ee53;
@@ -105,6 +106,10 @@ section span{
     cursor: pointer;
 }
 
+a:visited{
+    color: blue;
+}
+
 .sideContainer div{
     height: 80%;
     width: 80%;
@@ -114,7 +119,7 @@ section span{
 
 #signUpImgHere{
     position: relative;
-    background-image: url(images/SignUpImg.png);
+    background-image: url(../images/SignUpImg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

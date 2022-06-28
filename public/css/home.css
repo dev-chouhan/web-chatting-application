@@ -61,7 +61,7 @@ nav {
 
 .dropbtn {
     color: aliceblue;
-    background-color: rgb(48, 48, 48);
+    background-color: transparent;
     border: none;
     font-size: 15px;
 }
@@ -145,7 +145,7 @@ section main button{
     border-radius: 10px;
     background-color: rgb(48, 48, 48);
     color: aliceblue;
-    font-size: 22px;
+    font-size: 2rem;
     
 }
 

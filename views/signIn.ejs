@@ -21,7 +21,7 @@
             <section>
                 <i class="fa fa-user-circle fa-5x" aria-hidden="true"></i>
                 <p>Log In / Sign In</p>
-                <ul>
+                <form action="/" method="post">
                     <div>
                         <label for="userName">User-Name:</label>
                         <input type="text" name="userName" id="userName" placeholder="User Name" required>
@@ -30,10 +30,11 @@
                         <label for="userPassword">Password:</label>
                         <input type="password" name="userPassword" id="userPassword" placeholder="Password" required>
                     </div>
-                    <span class="toLeft">Forget Password ?</span>
-                </ul>
-                <button type="submit">Log In</button>
-                <span id="backToReg">Don't have an account? <strong style="color: blue;"><u>Sign Up</u></strong></span>
+                    <span class="toLeft"><a href="./registerUser" target="_blank">Forget Password ?</a></span>
+                    <br>
+                    <button type="submit">Log In</button>
+                </form>
+                <span id="backToReg">Don't have an account? <strong style="color: blue;"> <a href="./registerUser" target="_blank"><u>Sign Up</u></a></strong></span>
             </section>
         </div>
         <div class="sideContainer">
