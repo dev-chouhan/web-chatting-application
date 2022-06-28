@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, #f9fff0 70%, #b0ee53 30%);
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    position: absolute;
+    height: 85vh;
+    width: 92vw;
+    margin: 7vh 4vw;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.75);
+}
+
+.container .formContainer{
+    height: 100%;
+    width: 60%;
+    position: relative;
+    float: left;
+    background-color: #fbfff5;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.container .sideContainer{
+    height: 100%;
+    width: 40%;
+    position: relative;
+    float: right;
+    background-color: #aaff2b;
+}
+
+section{
+    position: relative;
+    height: 80%;
+    width: 60%;
+    margin: 2vw auto;
+    display: flex;
+    flex-direction: column;
+}
+
+section i{
+    margin: 0vw auto;
+}
+
+section p{
+    margin: 2rem auto;
+    font-size: 2rem;
+}
+
+section div, section span, section button{
+    margin: 1.3rem 2rem;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+
+section .toLeft{
+    position: relative;
+    left: 20vw;
+    color: blue;
+}
+
+section input{
+    border-radius: 10px;
+    padding: 8px;
+    border-style: double;
+}
+
+section #backToReg{
+    position: relative;
+    margin: auto;
+}
+
+section button{
+    margin-top: 6vh;
+    padding: 10px;
+    background-color: #b0ee53;
+    color: black;
+    border: 2px dashed #9fd74b;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+section button:hover{
+    background-color: white;
+    font-size: 1.6rem;
+    padding: 9px;
+
+}
+
+section span{
+    cursor: pointer;
+}
+
+.sideContainer div{
+    height: 80%;
+    width: 80%;
+    margin: 2vw auto;
+    
+}
+
+#signUpImgHere{
+    position: relative;
+    background-image: url(images/SignUpImg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sideContainer p{
+    position: relative;
+    margin: 9vh 1vh;
+    font-size: 1rem;
+}

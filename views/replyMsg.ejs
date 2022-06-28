@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message</title>
+    <link rel="stylesheet" href="css/replyMsg.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<%- include partials/navbar.ejs %>
+
+
+<section>
+    <div class="formContainer">
+        <div class="formArea">
+            <div class="messageHeader">
+                <p>New Message</p>
+            </div>
+            <form action="/index.html" method="get">
+                <span class="userNameArea">
+                    <label for="userName">From: </label>
+                    <div><button id="inputName" aria-placeholder="">User Name Here</button></div>
+                </span>
+                <textarea name="" id="Message" cols="40" rows="13" placeholder="Type Here... "></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="textContainer">
+        <div class="textBox">
+            <p><strong style="font-size: 2.5rem; font-weight:700"> "</strong>Enlightenment is man's leaving his self-caused immaturity. Immaturity is the incapacity to use one's intelligence without the guidance of another. Such immaturity is self-caused if it is not caused by lack of intelligence, but by lack of determination and courage to use one's intelligence without being guided by another. Sapere Aude! Have the courage to use your own intelligence! is therefore the motto of the enlightenment.<strong style="font-size: 3rem; font-weight:700">" </strong><br><br><strong> — Immanuel Kant</strong></p>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>
