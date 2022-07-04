@@ -24,17 +24,19 @@
                 <form action="/" method="post">
                     <div>
                         <label for="userName">User-Name:</label>
-                        <input type="text" name="userName" id="userName" placeholder="User Name" required>
+                        <input type="text" name="signUserName" id="userName" placeholder="User Name" required>
                     </div>
                     <div>
                         <label for="userPassword">Password:</label>
-                        <input type="password" name="userPassword" id="userPassword" placeholder="Password" required>
+                        <input type="password" name="signUserPassword" id="userPassword" placeholder="Password" required>
                     </div>
-                    <span class="toLeft"><a href="./registerUser" target="_blank">Forget Password ?</a></span>
+                    <span class="toLeft"><a href="./registerUser">Forget Password ?</a></span>
                     <br>
-                    <button type="submit">Log In</button>
+                    <button id="logInButton" type="submit">Log In</button>
                 </form>
-                <span id="backToReg">Don't have an account? <strong style="color: blue;"> <a href="./registerUser" target="_blank"><u>Sign Up</u></a></strong></span>
+                <form action="/registerUser">
+                    <span id="backToReg">Don't have an account?<button type="submit" id="signUpButton"><u>Sign Up</u></button></span>
+                </form>
             </section>
         </div>
         <div class="sideContainer">

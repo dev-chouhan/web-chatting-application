@@ -61,7 +61,7 @@ nav {
 
 .dropbtn {
     color: aliceblue;
-    background-color: rgb(48, 48, 48);
+    background-color: transparent;
     border: none;
     font-size: 15px;
 }
@@ -180,6 +180,9 @@ section .formContainer .formArea form .userNameArea #inputName{
 section .formContainer .formArea form textarea{
     padding: 10px;
     font-size: 20px;
+    position: relative;
+    height: 50%;
+    width: 90%;
 }
 
 section .formContainer .formArea form>button{
@@ -214,18 +217,16 @@ section .textContainer .textBox{
     height: 75%;
     width: 80%;
     position: relative;
-    margin: 10% auto;
+    margin: 8% auto;
     /* border: 2px solid black; */
-    font-family: 'Caveat Brush', cursive;
+    background-image: url(../images/SignUpImg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-section .textContainer .textBox p{
-    font-size: 2rem;
-    transform: rotatez(3deg);
-}
-
-section .textContainer .textBox:hover p{
-    font-size: 2.05rem;
-    margin: 9% auto;
+section .textContainer .textBox:hover{
+    height: 80%;
+    width: 85%;
     transition: all 1s ease-in-out;
 }
