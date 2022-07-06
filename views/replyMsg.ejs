@@ -45,9 +45,9 @@
             <form action="/replyMsg" method="post">
                 <span class="userNameArea">
                     <label for="userName">From: </label>
-                    <div><button id="inputName" aria-placeholder="User's Name"></button></div>
+                    <div><button id="inputName" aria-placeholder="User's Name"><%= SignedUserName %></button></div>
                 </span>
-                <textarea name="" id="Message" placeholder="Type Here... "></textarea>
+                <textarea name="signUserMessage" id="Message" placeholder="Type Here... "></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>

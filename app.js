@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+app.use(bodyParser.json());
+
 app.use(express.static("public"));
 
 //! DataBase creation
@@ -36,19 +38,37 @@ const personSchema = {
     },
 };
 
+const messageSchema = {
+    name: String,
+    time: String,
+    message: {
+        type: String,
+        // minlength: 6,
+        // maxlength: 20,
+    }
+}
+
 const personDetail = mongoose.model("personDetail", personSchema);
+const personMessage = mongoose.model("personMessage", messageSchema);
 
 // DataBase creation Ended here.
 
-const totalList = [];
-const personList = [];
+var currentUser;
+function formatAMPM(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+}
+var homePermanentDisplayContent = "Hello! " + currentUser + ". Welcome to my Online Web Chatting Application, for using this WebApp you need to follow some rules. So, plz checkOut About application tag in Header before procceding. Scroll Down for viewing latest messages. "
 
 //! Get Requests
 app.get("/", function (req, res) {
     res.render("signIn");
-    // personDetail.find({}, function(err, founddetail){
-
-    // })
 });
 
 app.get("/registerUser", function (req, res) {
@@ -60,15 +80,21 @@ app.get("/termsAndConditions", function (req, res) {
 });
 
 app.get("/home", function (req, res) {
-    res.render("home");
+    // console.log(currentUser);
+    personMessage.find({}, function(err, found){
+        // console.log(found);
+        res.render("home", {
+            parmanentPost: homePermanentDisplayContent,
+            userSignInTime: formatAMPM(new Date),
+            posts: found,
+        });
+    });
+    
 });
 
 app.get("/replyMsg", function (req, res) {
-    // personDetail.findOne({name: signUserName}, function(err, found){
-        
-    // })
     res.render("replyMsg", {
-        
+        SignedUserName: currentUser,
     });
 });
 
@@ -76,19 +102,17 @@ app.get("/aboutApplication", function (req, res) {
     res.render("aboutApplication");
 });
 
-
-
 //! Post Requests
 app.post("/", (req, res) => {
     var signUserName = req.body.signUserName;
     var signUserPassword = req.body.signUserPassword;
-
     personDetail.findOne({name: signUserName, password: signUserPassword}, function(err, found){
         if(err) {
             console.log(err);
             res.redirect("/");
         }
         else if(found){
+            currentUser = signUserName;
             res.redirect('/home');
         }
         else {
@@ -102,17 +126,26 @@ app.post("/registerUser", function (req, res) {
     var regUserName = req.body.regUserName;
     var regUserEmail = req.body.regUserEmail;
     var regUserPassword = req.body.regUserPassword;
-    console.log(regUserName + "  " + regUserEmail + "  " + regUserPassword);
+    // console.log(regUserName + "  " + regUserEmail + "  " + regUserPassword);
     const regPerson = new personDetail({
         name: regUserName,
         email: regUserEmail,
         password: regUserPassword
     });
+    currentUser = regUserName;
     regPerson.save();
     res.redirect("/home");
 })
 
 app.post("/replyMsg", function (req, res) {
+    const signUserMessage = req.body.signUserMessage;
+    const msgTime = new Date();
+    const msgOfPerson = new personMessage({
+        name: currentUser,
+        message: signUserMessage,
+        time: formatAMPM(new Date),
+    });
+    msgOfPerson.save();
     res.redirect("/home");
 });
 

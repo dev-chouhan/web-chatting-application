@@ -170,11 +170,14 @@ section .formContainer .formArea form .userNameArea label{
 
 section .formContainer .formArea form .userNameArea #inputName{
     width: 150%;
-    padding: 8px 15px 8px 15px;
+    padding: 3px 6px;
     border-radius: 10px;
     margin-bottom: 5px;
     background-color: white;
     cursor: not-allowed;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 section .formContainer .formArea form textarea{

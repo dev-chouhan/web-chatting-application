@@ -34,23 +34,27 @@
     <!-- ! Determine the body -->
     <section>
         <main>
-            <div class="date">
-                <p>26 July</p>
+            <div id="mainContainer">
+                <div class="date">
+                    <p>26 July</p>
+                </div>
+                <div class="message ">
+                    <div class="titleName ">Dev Chouhan<small><%=userSignInTime%></small> </div>
+                    <p class="titleContent"><%= parmanentPost %></p>
+                </div>
+                <%  posts.forEach(function(post){ %>
+                <div class="date">
+                    <p>26 July</p>
+                </div>
+                <div class="message ">
+                    <div class="titleName "><%=post.name%><small><%=post.time%></small> </div>
+                    <p class="titleContent"><%=post.message%></p>
+                </div>
+                <% }) %>
             </div>
-            <div class="message ">
-                <div class="titleName ">sharad maliwal <small>2:30pm</small> </div>
-                <p class="titleContent">Hello how are you</p>
-            </div>
-            <div class="message ">
-                <div class="titleName ">divyansh yadav <small>2:35pm</small> </div>
-                <p class="titleContent">why do you care !!</p>
-            </div>
-            <div class="date">
-                <p>26 July</p>
-            </div>
-            <a href="./replyMsg"><button>Reply</button></a>
         </main>
+        <a href="./replyMsg"><button>Reply</button></a>
     </section>
 
 
-<%- include ('partials/footer.ejs') %>
+    <%- include ('partials/footer.ejs') %>
