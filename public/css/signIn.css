@@ -68,15 +68,31 @@ section div {
 
 section .toLeft{
     position: relative;
+    top: 1vh;
     left: 20vw;
     color: blue;
 }
 
-section input{
-    border-radius: 10px;
-    padding: 8px;
-    border-style: double;
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    width: 29vw;
+    height: 5vh;
+    margin: 3px 2px;
+    padding: 3px 2px;
 }
+
+input:focus{
+    border-bottom: 3px solid black;
+    outline: none;
+    background: #f6ffe9;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 
 section #backToReg{
     position: relative;
@@ -128,9 +144,8 @@ a:visited{
 .sideContainer p{
     position: relative;
     margin: 9vh 1vh;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
-
 #signUpButton{
     padding:0px 0.5vw;
     background: transparent;

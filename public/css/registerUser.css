@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, #f9fff0 60%, #b0ee53 40%);
+    background: linear-gradient(90deg, #f9fff0 60%, #b0ee53 60%);
     height: 100vh;
     width: 100vw;
     font-family: 'Josefin Sans', sans-serif;
@@ -47,10 +47,6 @@ form {
     flex-direction: column;
 }
 
-a:visited{
-    color: blue;
-}
-
 input,
 button,
 span {
@@ -60,11 +56,19 @@ span {
 }
 
 form input {
-    border: 2px solid white;
-    border-radius: 20px;
-    box-shadow: -1px 1px 20px 1px rgba(47, 69, 10, 0.64);
-    -webkit-box-shadow: -1px 1px 20px 1px rgba(47, 69, 10, 0.64);
-    -moz-box-shadow: -1px 1px 20px 1px rgba(47, 69, 15, 0.64);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+}
+
+form input:focus{
+    border-bottom: 3px solid black;
+    outline: none;
+    background: #f6ffe9;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 form button {
