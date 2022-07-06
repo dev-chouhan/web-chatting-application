@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const ejs = require("ejs");
-const date = require(__dirname + "/date.js");
 
 const app = express();
 
@@ -41,19 +40,22 @@ const personSchema = {
 const messageSchema = {
     name: String,
     time: String,
+    date: String,
     message: {
         type: String,
-        // minlength: 6,
-        // maxlength: 20,
+        minlength: 2,
+        maxlength: 230,
     }
 }
 
 const personDetail = mongoose.model("personDetail", personSchema);
 const personMessage = mongoose.model("personMessage", messageSchema);
 
-// DataBase creation Ended here.
+//* DataBase creation Ended here.
 
-var currentUser;
+//! Variables and Functions Here
+var currentUser; 
+var userSignInDate; 
 function formatAMPM(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -64,7 +66,14 @@ function formatAMPM(date) {
     var strTime = hours + ':' + minutes + ' ' + ampm;
     return strTime;
 }
-var homePermanentDisplayContent = "Hello! " + currentUser + ". Welcome to my Online Web Chatting Application, for using this WebApp you need to follow some rules. So, plz checkOut About application tag in Header before procceding. Scroll Down for viewing latest messages. "
+function dateInHome(today){
+    const options = {
+        day: "numeric",
+        month: "short",
+    };
+    return today.toLocaleDateString("en-GB", options);
+}
+var homePermanentDisplayContent = "Hello! " + currentUser + ". Welcome to my Online Web Chatting Application, for using this Web App you need to follow some rules. So, plz checkOut About application tag in Header before proceeding. Scroll Down for viewing latest messages. "
 
 //! Get Requests
 app.get("/", function (req, res) {
@@ -72,6 +81,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/registerUser", function (req, res) {
+    userSignInDate = dateInHome(new Date);
     res.render("registerUser");
 });
 
@@ -80,10 +90,10 @@ app.get("/termsAndConditions", function (req, res) {
 });
 
 app.get("/home", function (req, res) {
-    // console.log(currentUser);
     personMessage.find({}, function(err, found){
         // console.log(found);
         res.render("home", {
+            permaTodaysDate: userSignInDate,
             parmanentPost: homePermanentDisplayContent,
             userSignInTime: formatAMPM(new Date),
             posts: found,
@@ -108,16 +118,14 @@ app.post("/", (req, res) => {
     var signUserPassword = req.body.signUserPassword;
     personDetail.findOne({name: signUserName, password: signUserPassword}, function(err, found){
         if(err) {
-            console.log(err);
-            res.redirect("/");
+            res.send(err);
         }
         else if(found){
             currentUser = signUserName;
             res.redirect('/home');
         }
         else {
-            console.log('UserName or password is incorect');
-            res.redirect("/");
+            res.send('UserName or password is incorect');
         }
     });
 });
@@ -135,15 +143,15 @@ app.post("/registerUser", function (req, res) {
     currentUser = regUserName;
     regPerson.save();
     res.redirect("/home");
-})
+});
 
 app.post("/replyMsg", function (req, res) {
     const signUserMessage = req.body.signUserMessage;
-    const msgTime = new Date();
     const msgOfPerson = new personMessage({
         name: currentUser,
         message: signUserMessage,
         time: formatAMPM(new Date),
+        date: dateInHome(new Date),
     });
     msgOfPerson.save();
     res.redirect("/home");

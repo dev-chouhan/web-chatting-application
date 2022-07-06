@@ -36,20 +36,23 @@
         <main>
             <div id="mainContainer">
                 <div class="date">
-                    <p>26 July</p>
+                    <p><%= permaTodaysDate %></p>
                 </div>
                 <div class="message ">
                     <div class="titleName ">Dev Chouhan<small><%=userSignInTime%></small> </div>
                     <p class="titleContent"><%= parmanentPost %></p>
                 </div>
                 <%  posts.forEach(function(post){ %>
-                <div class="date">
-                    <p>26 July</p>
-                </div>
-                <div class="message ">
-                    <div class="titleName "><%=post.name%><small><%=post.time%></small> </div>
-                    <p class="titleContent"><%=post.message%></p>
-                </div>
+                    <% if(permaTodaysDate != post.date){ %>
+                        <div class="date">
+                            <p><%=post.date%></p>
+                        </div>
+                        <% permaTodaysDate = post.date %>
+                    <% } %>
+                    <div class="message ">
+                        <div class="titleName "><%=post.name%><small><%=post.time%></small> </div>
+                        <p class="titleContent"><%=post.message%></p>
+                    </div>
                 <% }) %>
             </div>
         </main>
