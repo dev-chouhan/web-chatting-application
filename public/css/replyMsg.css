@@ -162,6 +162,7 @@ section .formContainer .formArea form .userNameArea{
     display: flex;
     flex-direction: row;
     padding: 15px;
+    margin-left: 2vw;
 }
 
 section .formContainer .formArea form .userNameArea label{
@@ -181,11 +182,20 @@ section .formContainer .formArea form .userNameArea #inputName{
 }
 
 section .formContainer .formArea form textarea{
-    padding: 10px;
+    padding: 15px;
     font-size: 20px;
     position: relative;
     height: 50%;
-    width: 90%;
+    width: 86%;
+    resize: none;
+    border: 1.5px solid #b2b2b2;
+    border-radius: 5px;
+    outline: none;
+}
+
+section .formContainer .formArea form #countCharacter{
+    margin-top: 1vh;
+    margin-left: 25vw;
 }
 
 section .formContainer .formArea form>button{
