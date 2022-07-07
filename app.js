@@ -73,7 +73,7 @@ function dateInHome(today){
     };
     return today.toLocaleDateString("en-GB", options);
 }
-var homePermanentDisplayContent = "Hello! " + currentUser + ". Welcome to my Online Web Chatting Application, for using this Web App you need to follow some rules. So, plz checkOut About application tag in Header before proceeding. Scroll Down for viewing latest messages. "
+// var homePermanentDisplayContent = "Hello! " + currentUser + ". Welcome to my Online Web Chatting Application, for using this Web App you need to follow some rules. So, plz checkOut About application tag in Header before proceeding. Scroll Down for viewing latest messages. "
 
 //! Get Requests
 app.get("/", function (req, res) {
@@ -94,7 +94,7 @@ app.get("/home", function (req, res) {
         // console.log(found);
         res.render("home", {
             permaTodaysDate: userSignInDate,
-            parmanentPost: homePermanentDisplayContent,
+            signedUserName: currentUser,
             userSignInTime: formatAMPM(new Date),
             posts: found,
         });
