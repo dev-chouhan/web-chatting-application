@@ -5,10 +5,11 @@
 }
 
 body {
-    background: linear-gradient(90deg, #f9fff0 60%, #b0ee53 60%);
+    background: linear-gradient(90deg, #fff 60%, #6CC4A1 60%);
     height: 100vh;
     width: 100vw;
     font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden;
 }
 
 /* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22t%22%2Ce%3A%22b%22%2Cd%3A600%2CD%3A0%2Cf%3A%7Bx%3A-300%2Cy%3A0%7D%2Ct%3A%7Bx%3A0%2Cy%3A0%7D%2Cs%3A4%2Cb%3A4%7D%2C%7BT%3A%22c%22%2Ce%3A%22s%22%2Cd%3A800%2CD%3A65%2Cf%3A%7Bx%3A1%2Cy%3A1%7D%2Ct%3A%7Bx%3A0.1%2Cy%3A2.3%7D%2Cs%3A2%2Cb%3A4%7D%2C%7BT%3A%22c%22%2Ce%3A%22s%22%2Cd%3A300%2CD%3A30%2Cf%3A%7Bx%3A1%2Cy%3A1%7D%2Ct%3A%7Bx%3A5%2Cy%3A1%7D%2Cs%3A3%2Cb%3A4%7D%5D%7D */
@@ -45,7 +46,7 @@ body {
 }
 
 .container .formContainer {
-    background-color: white;
+    background-color: #fff;
     box-shadow: 0px -1px 30px 7px rgba(0, 0, 0, 0.51);
     -webkit-box-shadow: 0px -1px 30px 7px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: 0px -1px 30px 7px rgba(0, 0, 0, 0.51);
@@ -83,14 +84,16 @@ form input {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #6CC4A1;
+    color: #4CACBC;
+    font-weight: 500;
 }
 
 form input:focus{
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #6CC4A1;
     outline: none;
-    background: #f6ffe9;
-    color: black;
+    background: #fff;
+    color: #4CACBC;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -100,17 +103,20 @@ form button {
     border: none;
     width: 50%;
     border-radius: 8px;
-    background-color: #b0ee53;
-    color: black;
-    border: 2px dashed #9fd74b;
+    background-color: #6CC4A1;
+    color: #fff;
+    border: 2px solid #6CC4A1;
     cursor: pointer;
     padding: 1.1vw;
     font: 1em;
 }
 
 form button:hover {
+    transition: all 500ms ease-in-out;
     padding: 1.05vw;
+    border: 2px dashed #4CACBC;
     background-color: white;
+    color: #4CACBC;
     font-size: 14px;
 }
 
@@ -118,3 +124,6 @@ form strong{
     cursor: pointer;
 }
 
+a{
+    color: #4CACBC;
+}

@@ -18,7 +18,7 @@
         <div id="navElements">
             <ul>
                 <li><a href="./home" style="color: white; text-decoration: none">Home</a></li>
-                <li>Contact Developer</li>
+                <li> <a href="https://github.com/dev-chouhan" target="_blank"> Contact Developer</a></li>
                 <li>
                     <div class="dropdown">
                         <button class="dropbtn">About Application</button>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="message ">
                     <div class="titleName ">Dev Chouhan<small><%=userSignInTime%></small> </div>
-                    <p class="titleContent">"Hello! <b><%=signedUserName%></b>. Welcome to my Online Web Chatting Application, for using this Web App you need to follow some rules. So, plz checkOut About application tag in Header before proceeding. Scroll Down for viewing latest messages. "</p>
+                    <p class="titleContent">"Hello! <b class="capitalize"><%=signedUserName%></b>. Welcome to my Online Web Chatting Application, for using this Web App you need to follow some rules. So, plz checkOut About application tag in Header before proceeding. Scroll Down for viewing latest messages. "</p>
                 </div>
                 <%  posts.forEach(function(post){ %>
                     <% if(permaTodaysDate != post.date){ %>
@@ -49,9 +49,11 @@
                         </div>
                         <% permaTodaysDate = post.date %>
                     <% } %>
-                    <div class="message ">
-                        <div class="titleName "><%=post.name%><small><%=post.time%></small> </div>
-                        <p class="titleContent"><%=post.message%></p>
+                    <div class="message-wrapper">
+                        <div class="message <%= signedUserName == post.name ? 'message-right' : '' %>">
+                            <div class="titleName "><%=post.name%><small><%=post.time%></small> </div>
+                            <p class="titleContent"><%=post.message%></p>
+                        </div>
                     </div>
                 <% }) %>
             </div>

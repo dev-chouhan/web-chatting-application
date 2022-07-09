@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #c9ff79;
+    background-color: #7bd7b2;
     height: 100vh;
     width: 100vw;
 }
@@ -17,7 +17,7 @@ nav {
     position: sticky;
     font-family: monospace;
     border-bottom-right-radius: 30px;
-    color: aliceblue;
+    color: #fff;
     background-color: rgb(48, 48, 48);
 }
 
@@ -60,7 +60,7 @@ nav {
 }
 
 .dropbtn {
-    color: aliceblue;
+    color: #fff;
     background-color: rgb(48, 48, 48);
     border: none;
     font-size: 15px;
@@ -82,7 +82,7 @@ nav {
 }
 
 .dropdown-content a {
-    color: aliceblue;
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -98,7 +98,7 @@ nav {
 }
 
 .dropdown:hover .dropbtn {
-    color: aliceblue;
+    color: #fff;
     background-color: rgb(48, 48, 48);
 }
 
@@ -110,7 +110,7 @@ footer {
     height: 6vh;
     width: 100vw;
     background-color: rgb(48, 48, 48);
-    color: aliceblue;
+    color: #fff;
     text-align: center;
 }
 
@@ -253,7 +253,8 @@ section main #mainContainer{
     position: absolute;
     left: 2%;
     top: 2%;
-    overflow: auto;
+    overflow-y : auto;
+    overflow-x: hidden;
 }
 
 section main #mainContainer::-webkit-scrollbar{
@@ -285,7 +286,7 @@ section button{
     padding: 3px;
     border-radius: 5px;
     background-color: rgb(48, 48, 48);
-    color: aliceblue;
+    color: #fff;
     font-size: 16px;
     animation: animation 1000ms linear both;
 }
@@ -338,7 +339,7 @@ section main .message .titleContent{
     width: 100%;
     border: 2px solid black;
     font-weight: 15px;
-    background: #c9ff79;
+    background: #6CC4A1;
 }
 
 section .date{
@@ -353,4 +354,19 @@ section .date{
     border-radius: 5px;
     position: relative;
     left: 48vw;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.message.message-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60vw;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }

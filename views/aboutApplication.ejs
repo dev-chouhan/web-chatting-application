@@ -1,12 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        #BodyElement {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background: #fff;
+            color: #303030;
+        }
+
+        header {
+            position: relative;
+            height: 20vh;
+            width: 100vw;
+            background-color: #6CC4A1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 1.5;
+        }
+
+        header>p {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+
+        header>span {
+            font-size: 1rem;
+            font-weight: 200;
+            position: relative;
+            left: 5vw;
+            bottom: 0.5vh;
+        }
+
+        section {
+            position: relative;
+            height: 77vh;
+            width: 100vw;
+            padding: 10vh 8vw;
+        }
+
+        section>#intro {
+            margin-bottom: 10vh;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        section>#direction {
+            position: relative;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section>#direction>p {
+            font-size: 2rem;
+            font-weight: 600;
+            padding-bottom: 3vh;
+        }
+
+        section>#direction>span {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        section>#direction>.Thanking {
+            font-size: 2rem;
+            font-weight: 600;
+
+        }
+
+        section::-webkit-scrollbar {
+            width: 0.8vw;
+        }
+
+        section::-webkit-scrollbar-button {
+            height: 100vh;
+        }
+
+        section::-webkit-scrollbar-thumb {
+            background: black;
+        }
+
+        section::-webkit-scrollbar-track {
+            background: transparent;
+            border: 1px solid black;
+            border-right: 2px solid black;
+        }
+    </style>
 </head>
+
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem porro, repellendus beatae est vel sit aspernatur veniam odit velit eveniet quisquam dolore deserunt nemo praesentium soluta voluptatum architecto error. Quo sed nobis unde fugit voluptates in consequatur adipisci laborum, excepturi temporibus similique beatae est aspernatur, ab nemo quaerat voluptatum ratione corrupti voluptatibus dolor fugiat ipsam ut molestias? Voluptates nam mollitia, asperiores consectetur recusandae sit maxime voluptas impedit illum nulla nesciunt laudantium dolor fugit velit, quos exercitationem magnam vitae, neque in aliquam rerum obcaecati quasi. Nulla tempore animi saepe ullam, quam ex quas alias, vero possimus neque officiis dolorem, odio suscipit?</p>
+    <div id="BodyElement">
+        <header>
+            <p>About Application</p>
+            <span>Rules you have to follow...</span>
+        </header>
+        <section>
+            <div id="intro">This is an Online Group Chatting Application, build on HTML(for structure), CSS(for
+                designing), JavaScript Modules like Node Js, Express Js(for linking pages), Body-Parser JS, Mongoose
+                JS(for DataBase)</div>
+
+            <div id="direction">
+                <p>Direction To Follow (including Rules):</p>
+                <span>1. App starts with <b> SIGN IN</b> Page, which act as our root directory.</span>
+                <br>
+                <span>2. Data provided by user will be compared within DataBase, If values given by user and in database
+                    is Identically same then, user will be render to <b>HOME</b> Page otherwise back to SignIn Page with
+                    an Error displayed.</span>
+                <br>
+                <span>3. If user havn't had pre-registered account then, he/she can register itself to <b>REGISTRATION
+                        Page/Sign Up Page</b></span>
+                <br>
+                <span>4. On registration Page, user had to register his/her Name, EMail and Password while agreed to
+                    <b>Terms And Conditions</b>.</span>
+                <br>
+                <span>5. On <b>HOME Page</b> first text will be of Developer, explaning basic rules to begin instant
+                    chatting.</span>
+                <br>
+                <span>6. Previously Comments will be displayed with sender's Name and Message timing, rendered on the
+                    left side, while user message will be shown on right side</span>
+                <br>
+                <span>7. For replying, Click on reply button, for redirecting to <b>MESSAGE REPLY Page</b></span>
+                <br>
+                <span>8. <b>REPLY Page</b> will show user's Name and below it there is a Reply Box, which has a limit of
+                    250 Words. On exceeding words limit, Reply Box changes it's Border color and submit button faded and
+                    non-respondable, Unless user re-write message within word limit.</span>
+                <br>
+                <span>9. On sumbitting the reply message you will be rendered to <b>HOME Page</b>, where you can see
+                    your comments and latest/previous comments in left and right order as described above.</span>
+                <br>
+                <span>10. Sorry, this WebApp doesnot contain log Out Button. So, you need to get back to root
+                    branch(sign in Page). For that remove last word after "/" and load the Page or you can just re-load
+                    this website with the same link you used to load in first place. </span>
+                <br><br><br>
+                <span class="Thanking">Thank YOU For Using This Application</span>
+                <span class="Thanking">I Hope you will have a look at some more awesome projects developed by ME.</span>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>

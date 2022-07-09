@@ -56,6 +56,8 @@ const personMessage = mongoose.model("personMessage", messageSchema);
 //! Variables and Functions Here
 var currentUser; 
 var userSignInDate; 
+var signInError = ''; 
+
 function formatAMPM(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -77,7 +79,10 @@ function dateInHome(today){
 
 //! Get Requests
 app.get("/", function (req, res) {
-    res.render("signIn");
+    userSignInDate = dateInHome(new Date);
+    res.render("signIn", {
+        UserErrorMsg: signInError,
+    }) ;
 });
 
 app.get("/registerUser", function (req, res) {
@@ -125,7 +130,9 @@ app.post("/", (req, res) => {
             res.redirect('/home');
         }
         else {
-            res.send('UserName or password is incorect');
+            // res.send('UserName or password is incorect');
+            signInError = 'Username or Password is incorrect';
+            res.redirect('/');
         }
     });
 });

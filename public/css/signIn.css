@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, #f9fff0 70%, #b0ee53 30%);
+    background: linear-gradient(90deg, #fff 70%, #6CC4A1 30%);
     height: 100vh;
     width: 100vw;
     font-family: 'Josefin Sans', sans-serif;
@@ -26,7 +26,7 @@ body {
     width: 60%;
     position: relative;
     float: left;
-    background-color: #fbfff5;
+    background-color: #fff;
     font-family: 'Oxygen', sans-serif;
 }
 
@@ -35,7 +35,7 @@ body {
     width: 40%;
     position: relative;
     float: right;
-    background-color: #aaff2b;
+    background-color: #6CC4A1;
 }
 
 section{
@@ -52,7 +52,7 @@ section i{
 }
 
 section p{
-    margin: 2rem auto;
+    margin: 1.1rem auto;
     font-size: 2rem;
 }
 
@@ -68,27 +68,27 @@ section div {
 
 section .toLeft{
     position: relative;
-    top: 1vh;
     left: 20vw;
-    color: blue;
+    color: #4CACBC;
 }
 
 input {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #6CC4A1;
     width: 29vw;
     height: 5vh;
     margin: 3px 2px;
     padding: 3px 2px;
+    color: #4CACBC;
 }
 
 input:focus{
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #6CC4A1;
     outline: none;
-    background: #f6ffe9;
-    color: black;
+    background: #fff;
+    color: #4CACBC;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -101,18 +101,21 @@ section #backToReg{
 
 section #logInButton{
     width: 88%;
-    margin-top: 6vh;
+    margin-top: 4vh;
     padding: 10px;
-    background-color: #b0ee53;
-    color: black;
-    border: 2px dashed #9fd74b;
+    background-color: #6CC4A1;
+    color: #fff;
+    border: 2px solid #6CC4A1;
     border-radius: 10px;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 section #logInButton:hover{
+    transition: all 500ms ease-in-out;
+    border: 2px dashed #4CACBC;
     background-color: white;
+    color: #4CACBC;
     font-size: 1.6rem;
     padding: 9px;
 
@@ -123,7 +126,7 @@ section span{
 }
 
 a:visited{
-    color: blue;
+    color: #4CACBC;
 }
 
 .sideContainer div{
@@ -136,6 +139,7 @@ a:visited{
 #signUpImgHere{
     position: relative;
     background-image: url(../images/SignUpImg.png);
+    /* filter: invert(100%); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -152,6 +156,16 @@ a:visited{
     border: none;
     font-size: 1.3rem;
     font-weight: 600;
-    color: blue;
+    color: #4CACBC;
     cursor: pointer;
+}
+
+.error-container {
+    background: #ff000033;
+    color: #db0404;
+    font-weight: 600;
+    padding: 0px 16px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: none;
 }
