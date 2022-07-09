@@ -22,8 +22,8 @@ const personSchema = {
     name: {
         type: String,
         required: [true, "UserName is not there!"],
-        // minlength: 3,
-        // maxlength: 20
+        minlength: 3,
+        maxlength: 20
     },
     email: {
         type: String,
@@ -32,8 +32,8 @@ const personSchema = {
     password: {
         type: String,
         required: true,
-        // minlength: 6,
-        // maxlength: 20,
+        minlength: 6,
+        maxlength: 20,
     },
 };
 
