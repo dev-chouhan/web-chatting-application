@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/replyMsg.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Concert+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
                     <label for="userName">From: </label>
                     <div><button id="inputName" aria-placeholder="User's Name"><%= SignedUserName %></button></div>
                 </span>
-                <textarea name="signUserMessage" id="Message" placeholder="Type Here... "></textarea>
+                <textarea name="signUserMessage" id="Message" placeholder="Type Here... " spellcheck="false"></textarea>
                 <p id="countCharacter"></p>
                 <button type="submit" id="disabledWhenCountIncr">Submit</button>
             </form>

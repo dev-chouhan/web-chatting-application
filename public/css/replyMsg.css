@@ -15,7 +15,6 @@ nav {
     height: 12%;
     /* border: 2px solid red; */
     position: sticky;
-    font-family: monospace;
     border-bottom-right-radius: 30px;
     color: #fff;
     background-color: rgb(48, 48, 48);
@@ -30,21 +29,23 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
-    font-weight: 15px;
+    font-size: 2.8rem;
+    font-weight: 1rem;
+    font-family: 'Concert One', cursive;
 }
 
 #navElements {
-    width: 25%;
+    width: 27%;
     height: 30%;
     position: absolute;
-    left: 72vw;
+    left: 70vw;
     bottom: 6px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 15px;
     /* border: 2px solid green; */
+    font-family: 'Comfortaa', cursive;
 }
 
 #navElements ul {
@@ -64,6 +65,7 @@ nav {
     background-color: transparent;
     border: none;
     font-size: 15px;
+    font-family: 'Comfortaa', cursive;
 }
 
 .dropdown {
@@ -86,6 +88,7 @@ nav {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-family: 'Comfortaa', cursive;
 }
 
 .dropdown-content a:hover {
@@ -167,6 +170,7 @@ section .formContainer .formArea .messageHeader{
     align-items: center;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    font-family: 'Concert One', cursive;
 }
 
 section .formContainer .formArea form{
@@ -178,6 +182,7 @@ section .formContainer .formArea form{
     align-items: center;
     flex-direction: column;
     font-size: 18px;
+    font-family: 'Comfortaa', cursive;
 }
 
 section .formContainer .formArea form .userNameArea{
@@ -215,6 +220,7 @@ section .formContainer .formArea form textarea{
     border: 1.5px solid #b2b2b2;
     border-radius: 5px;
     outline: none;
+    font-family: 'Comfortaa', cursive;
 }
 
 section .formContainer .formArea form #countCharacter{
@@ -232,6 +238,7 @@ section .formContainer .formArea form>button{
     color: white;
     font-size: 25px;
     border-radius: 10px;
+    font-family: 'Concert One', cursive;
 }
 
 section .formContainer .formArea form>button:hover{

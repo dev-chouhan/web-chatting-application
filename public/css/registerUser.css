@@ -8,7 +8,6 @@ body {
     background: linear-gradient(90deg, #fff 60%, #6CC4A1 60%);
     height: 100vh;
     width: 100vw;
-    font-family: 'Josefin Sans', sans-serif;
     overflow: hidden;
 }
 
@@ -61,6 +60,7 @@ body {
 .container .formContainer p {
     margin-top: 3vw;
     font-size: 4vw;
+    font-family: 'Concert One', cursive;
 }
 
 form {
@@ -78,6 +78,7 @@ span {
     padding: 10px;
     margin-top: 2%;
     margin-bottom: 4%;
+    font-family: 'Comfortaa', cursive;
 }
 
 form input {
@@ -101,27 +102,29 @@ form input:focus{
 form button {
     margin: auto;
     border: none;
-    width: 50%;
+    width: 70%;
     border-radius: 8px;
     background-color: #6CC4A1;
     color: #fff;
     border: 2px solid #6CC4A1;
     cursor: pointer;
-    padding: 1.1vw;
-    font: 1em;
+    padding: 1.9vh 2.2vw;
+    font-size: 1.3rem;
+    font-family: 'Concert One', cursive;
 }
 
 form button:hover {
     transition: all 500ms ease-in-out;
-    padding: 1.05vw;
+    padding: 1.9vh 2.2vw;
     border: 2px dashed #4CACBC;
     background-color: white;
     color: #4CACBC;
-    font-size: 14px;
+    font-size: 1.3rem;
 }
 
 form strong{
     cursor: pointer;
+    font-family: 'Comfortaa', cursive;
 }
 
 a{
