@@ -16,14 +16,15 @@
         <div class="formContainer">
             <p>Register User</p>
             <form action="/registerUser" method="post">
-                <input type="text" name="regUserName" id="" placeholder="Name" required>
-                <input type="email" name="regUserEmail" id="" placeholder="E-mail" required>
-                <input type="password" name="regUserPassword" id=" " placeholder="Password" required>
+                <input type="text" name="regUserName" id="" placeholder="UserName (Case Sensitive)" autocomplete="off" required>
+                <input type="email" name="regUserEmail" id="" placeholder="E-mail (must be unique)"  autocomplete="off" required>
+                <input type="password" name="regUserPassword" id=" " placeholder="Password (must contain atleast 4 digits)" required>
                 <span><input type="checkbox" name="" id="" required style="box-shadow: none;">   I read and agree to <strong style="text-decoration: underline;"><a href="./termsAndConditions" target="_blank">Terms & Conditions</a> </strong></span>
                 <button type="submit">CREATE ACCOUNT</button>
                 <span>Already have an account? <strong style="text-decoration: underline;"> <a href="./">Sign In</a> </strong></span>
             </form>
         </div>
+        <div class="gif"><iframe src="https://giphy.com/embed/eNotYhz6gsoNBUzsUa" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/hello-wave-aarongonzalez-eNotYhz6gsoNBUzsUa"></a></p></div>
     </div>
 </body>
 

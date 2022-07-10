@@ -258,21 +258,16 @@ section .textContainer{
 }
 
 section .textContainer .textBox{
-    height: 75%;
-    width: 80%;
+    height: 60%;
+    width: 60%;
     position: relative;
-    margin: 8% auto;
+    margin: 4% 0% 0% 10%;
     /* border: 2px solid black; */
-    background-image: url(../images/SignUpImg.png);
+    /* background-image: url(../images/SignUpImg.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-section .textContainer .textBox:hover{
-    height: 80%;
-    width: 85%;
-    transition: all 1s ease-in-out;
+    pointer-events: none;
 }
 
 a{

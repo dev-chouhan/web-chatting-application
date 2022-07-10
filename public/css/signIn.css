@@ -79,7 +79,7 @@ input {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #6CC4A1;
+    border-bottom: 2px solid #4CACBC;
     width: 29vw;
     height: 5vh;
     margin: 3px 2px;
@@ -90,7 +90,7 @@ input {
 }
 
 input:focus{
-    border-bottom: 3px solid #6CC4A1;
+    border-bottom: 3px solid #4CACBC;
     outline: none;
     background: #fff;
     color: #4CACBC;

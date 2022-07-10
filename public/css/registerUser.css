@@ -55,6 +55,7 @@ body {
     text-align: center;
     border-radius: 20px;
     display: table;
+    left: 8vw;
 }
 
 .container .formContainer p {
@@ -129,4 +130,12 @@ form strong{
 
 a{
     color: #4CACBC;
+}
+
+.gif{
+    position: relative;
+    top: 30vh;
+    left: 23vw;
+    pointer-events: none;
+    transform: scaleX(-1);
 }
