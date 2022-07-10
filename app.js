@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 //! DataBase creation
-mongoose.connect("mongodb://localhost:27017/chatApp");
+mongoose.connect("mongodb+srv://devchouhan24:452318110_Atlas@cluster0.ljmrn.mongodb.net/?retryWrites=true&w=majority");
 
 const personSchema = {
     name: {
